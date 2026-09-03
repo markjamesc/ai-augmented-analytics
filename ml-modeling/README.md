@@ -1,45 +1,55 @@
-# 📊 Customer Response Classifier (ML with tidymodels)
+# Customer Response Classifier
 
-This project demonstrates a machine learning classification pipeline using **R** and the **tidymodels** ecosystem. It trains a model to predict whether a customer will respond to marketing efforts, using a structured CSV dataset with demographic and behavioral data.
+A compact R/tidymodels project comparing logistic regression with a random forest for predicting whether a customer responds to a marketing offer.
 
----
+## Workflow
 
-## 🚀 Features
+- Stratified 80/20 train-test split
+- Training-only preprocessing recipe
+- Missing-value handling, dummy encoding, zero-variance removal, and normalization
+- Logistic-regression baseline
+- Random-forest comparison
+- Held-out accuracy, precision, recall, F1, ROC AUC, and confusion matrix
+- Random-forest feature-importance table
+- Excel publication of evaluation results
 
-- 📥 Loads and processes a clean dataset: `marketing_model_data.csv`
-- 🧠 Builds a complete ML workflow using **tidymodels**:
-  - Splits data into training/testing sets (stratified)
-  - Handles missing values and normalizes predictors
-  - Converts categorical variables into dummy variables
-- 🌲 Trains a **Random Forest** classification model using `rand_forest()` from `parsnip`
-- 📉 Trains a **Logistic Regression** model using `logistic_reg()` from `parsnip`
-- 📊 Evaluates model performance using:
-  - Accuracy
-  - Precision / Recall / F1 Score
-  - ROC-AUC + Confusion Matrix
-- 📈 Outputs a **feature importance plot** using `ggplot2`
-- 📤 Exports key results and metrics to `modeling_output.xlsx` using `openxlsx`
+The positive class is explicitly defined as `Yes`, preventing event-level ambiguity in precision, recall, F1, and ROC AUC.
 
----
+## Stack
 
-## 🧰 Technologies Used
+- R
+- tidymodels
+- ranger
+- yardstick
+- tidyverse and ggplot2
+- openxlsx
 
-- **R** (scripting language)
-- **tidymodels** (ML pipeline: recipes, parsnip, yardstick, etc.)
-- **openxlsx** (write Excel output)
-- **dplyr**, **ggplot2** (data wrangling and visualization)
+## Run locally
 
----
+Install the packages:
 
-## 📁 Folder Structure
-
-```
-ml_modeling_project/
-├── marketing_model_data.csv      # Dataset with 5000 rows, 11 columns
-├── ml_modeling.R                 # Main R script for ML pipeline
-├── modeling_output.xlsx          # Excel file with model results and metrics
-└── README.md                     # This documentation
+```r
+install.packages(c("tidymodels", "tidyverse", "openxlsx", "ranger"))
 ```
 
+Run from this directory:
 
+```r
+source("ml_modeling.R")
+```
+
+## Files
+
+| File | Purpose |
+|---|---|
+| [`marketing_sample_data.csv`](marketing_sample_data.csv) | Demonstration customer dataset |
+| [`ml_modeling.R`](ml_modeling.R) | Preprocessing, model fitting, held-out evaluation, and export |
+| [`ml_model_output.xlsx`](ml_model_output.xlsx) | Example evaluation workbook |
+
+## Limitations
+
+- This is a baseline demonstration, not a production model.
+- Hyperparameters are fixed rather than tuned through cross-validation.
+- Impurity-based random-forest importance can favor variables with more possible split points.
+- The held-out test set is used once for comparison; operational deployment would require calibration, stability, fairness, and monitoring checks.
 
