@@ -2,6 +2,8 @@
 
 A compact R/tidymodels project comparing logistic regression with a random forest for predicting whether a customer responds to a marketing offer.
 
+> **Output status:** The committed Excel workbook is the original May 2025 output and is retained as a historical artifact. The current R script contains later corrections and would produce a revised output if executed.
+
 ## Workflow
 
 - Stratified 80/20 train-test split
