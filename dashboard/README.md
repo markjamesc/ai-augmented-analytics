@@ -1,38 +1,53 @@
-# 📊 AI-Augmented System Performance Dashboard (Shiny)
+# System Performance Dashboard
 
-This project demonstrates a clean, interactive KPI dashboard built in R using **Shiny**, **tidyverse**, and **ggplot2**. It enables users to monitor and analyze system performance across regions using dynamic filters, time-series graphs, and real-time summary metrics.
+An interactive R Shiny dashboard for exploring system-performance KPIs by region and date range.
 
----
+![KPI summary preview](screenshots/kpi_summary.png)
 
-## 🚀 Features
+## Features
 
-- 🔍 Dynamic sidebar filters for Region and Date Range
-- 📈 Time-series visualizations of:
-  - Defect Rate
-  - Reliability Score
-  - Downtime (minutes)
-- 🧮 KPI summary table (average metrics)
-- 📋 Interactive data table with sorting/searching (via `DT`)
-- 🧑‍💼 Responsive UI design suitable for GitHub and business demonstration
-- 🧱 Clean folder structure and reusable code base
+- Region and date-range filters
+- Defect-rate, reliability, and downtime time series
+- Filtered KPI summary table
+- Searchable and sortable detailed data table
+- Reusable sample dataset with 288 observations
 
----
+## Stack
 
-## 🛠️ Technologies Used
+- R
+- Shiny
+- tidyverse and ggplot2
+- DT
 
-- `shiny`
-- `tidyverse` (for data wrangling and visualization)
-- `DT` (interactive tables)
-- `ggplot2` (data visualization)
+## Run locally
 
----
+Install the packages:
 
-## 📂 Folder Structure
+```r
+install.packages(c("shiny", "tidyverse", "DT"))
+```
 
-<pre> ``` 
-  dashboard/ 
-  ├── app.R # Main Shiny application 
-  ├── sample_data.csv # Sample KPI dataset (288 rows) 
-  ├── screenshots/ # Dashboard screenshots 
-  └── README.md # This documentation file 
-  ``` </pre>
+Start R from this directory and run:
+
+```r
+shiny::runApp("app.R")
+```
+
+## Additional previews
+
+- [Full dashboard view](screenshots/dashboard_view.pdf)
+- [North-region view](screenshots/dashboard_north.pdf)
+- [West-region view](screenshots/dashboard_west.pdf)
+
+## Files
+
+| File | Purpose |
+|---|---|
+| [`app.R`](app.R) | Shiny user interface, server logic, filtering, and charts |
+| [`sample_data.csv`](sample_data.csv) | Demonstration KPI data |
+| [`screenshots/`](screenshots/) | Rendered examples |
+
+## Limitation
+
+This is a compact demonstration app using local sample data. It does not include authentication, a production database connection, automated deployment, or monitoring.
+
