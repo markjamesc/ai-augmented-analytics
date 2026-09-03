@@ -2,6 +2,8 @@
 
 This repository contains three compact R projects demonstrating dashboarding, AI-assisted reporting, and interpretable classification. It is an earlier implementation portfolio and complements the newer decision-first case studies linked below.
 
+> **Historical portfolio note:** This repository preserves the original May 2025 Excel outputs as evidence of an earlier stage of my AI-augmented analytics work. The R scripts were revised in September 2026 to correct analytical and implementation weaknesses identified during later review. Consequently, the historical workbooks are not presented as outputs of the current scripts. Newer repositories demonstrate my current methodology.
+
 ## Projects
 
 | Project | Purpose | Stack | Evidence |
