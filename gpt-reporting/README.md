@@ -2,6 +2,8 @@
 
 An R workflow that summarizes a sample marketing dataset, sends the resulting evidence table to a configurable OpenAI model, and publishes the data plus three grounded narrative sections to Excel.
 
+> **Output status:** The committed Excel workbook is the original May 2025 output and is retained as a historical artifact. The current R script contains later corrections and would produce a revised output if executed.
+
 ## Outputs
 
 - Raw data
