@@ -2,7 +2,24 @@
 
 A compact R/tidymodels project comparing logistic regression with a random forest for predicting whether a customer responds to a marketing offer.
 
-> **Output status:** The committed Excel workbook is the original May 2025 output and is retained as a historical artifact. The current R script contains later corrections and would produce a revised output if executed.
+> **Output status:** The committed Excel workbook and archived script are the original May 2025 implementation. The current R script contains September 2026 corrections. Both versions are retained so the development is directly inspectable.
+
+## Version history
+
+| Artifact | Role |
+|---|---|
+| [Original 2025 script](historical/2025/ml_modeling_2025.R) | Historical implementation that produced the committed workbook |
+| [Original 2025 workbook](ml_model_output.xlsx) | Preserved output from the earlier workflow |
+| [Revised script](ml_modeling.R) | Current corrected implementation; no replacement workbook is committed |
+
+### What changed in the revised script
+
+- `Yes` is explicitly defined as the positive response class.
+- Precision, recall, F1, and ROC AUC use explicit event-level semantics.
+- Missing numeric values are imputed before normalization.
+- Unknown categorical values are handled before dummy encoding.
+- Feature importance is labeled descriptive rather than causal.
+- Production limitations are stated directly.
 
 ## Workflow
 
