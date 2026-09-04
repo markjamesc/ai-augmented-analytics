@@ -2,7 +2,23 @@
 
 An R workflow that summarizes a sample marketing dataset, sends the resulting evidence table to a configurable OpenAI model, and publishes the data plus three grounded narrative sections to Excel.
 
-> **Output status:** The committed Excel workbook is the original May 2025 output and is retained as a historical artifact. The current R script contains later corrections and would produce a revised output if executed.
+> **Output status:** The committed Excel workbook and archived script are the original May 2025 implementation. The current R script contains September 2026 corrections. Both versions are retained so the development is directly inspectable.
+
+## Version history
+
+| Artifact | Role |
+|---|---|
+| [Original 2025 script](historical/2025/generate_report_2025.R) | Historical implementation that produced the committed workbook |
+| [Original 2025 workbook](gpt_marketing_report.xlsx) | Preserved output from the earlier workflow |
+| [Revised script](generate_report.R) | Current corrected implementation; no replacement workbook is committed |
+
+### What changed in the revised script
+
+- Every model request receives the computed evidence table.
+- Cross-sectional differences are no longer mislabeled as temporal trends.
+- Recommendations must name supporting evidence and uncertainty.
+- The model is configurable through `OPENAI_MODEL` rather than silently fixed.
+- Missing API keys, HTTP failures, and malformed responses fail explicitly.
 
 ## Outputs
 
