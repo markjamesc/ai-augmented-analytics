@@ -10,7 +10,7 @@ An R workflow that summarizes a sample marketing dataset, sends the resulting ev
 |---|---|
 | [Original 2025 script](historical/2025/generate_report_2025.R) | Historical implementation that produced the committed workbook |
 | [Original 2025 workbook](gpt_marketing_report.xlsx) | Preserved output from the earlier workflow |
-| [Revised script](generate_report.R) | Current corrected implementation; no replacement workbook is committed |
+| [Revised script](generate_report.R) | Later reviewed implementation; it has not been used to replace the historical workbook |
 
 ### What changed in the revised script
 
