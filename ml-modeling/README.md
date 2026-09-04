@@ -10,7 +10,7 @@ A compact R/tidymodels project comparing logistic regression with a random fores
 |---|---|
 | [Original 2025 script](historical/2025/ml_modeling_2025.R) | Historical implementation that produced the committed workbook |
 | [Original 2025 workbook](ml_model_output.xlsx) | Preserved output from the earlier workflow |
-| [Revised script](ml_modeling.R) | Current corrected implementation; no replacement workbook is committed |
+| [Revised script](ml_modeling.R) | Later reviewed implementation; it has not been used to replace the historical workbook |
 
 ### What changed in the revised script
 
