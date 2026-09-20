@@ -36,10 +36,10 @@ These are focused demonstrations rather than production systems. The modeling pr
 
 ## Current portfolio work
 
-- [FulfillIQ — MySQL, R validation, Excel evidence, and decision support](https://github.com/markjamesc/fulfilliq)
+- [FulfillIQ 2.0 — completed independent SQL/R validation case study](https://github.com/markjamesc/fulfilliq-2.0)
 - [AI-Augmented Bitcoin Proxy Analysis](https://github.com/markjamesc/ai-augmented-bitcoin-proxy-analysis)
 - [Five-Stage AI-Augmented Analyst Workflow](https://github.com/markjamesc/ai-augmented-analyst-workflow)
-- [R Workflow Engine](https://github.com/markjamesc/r-workflow-engine)
+- [R Workflow Engine](https://github.com/markjamesc/ai-augmented-analyst-workflow/blob/main/docs/ENGINE.md)
 
 ## Contact
 
